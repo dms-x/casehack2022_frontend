@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UW Resgister</title>
+    <style>
+        body {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .topnav {
+          overflow: hidden;
+          background-image: linear-gradient(to right, rgb(125, 33, 231) , white);
+          transition-duration: 0.4s;
+
+        }
+        
+        .topnav a {
+          float: left;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+          transition-duration: 0.4s;
+        }
+        
+        .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+          transition-duration: 0.4s;
+        }
+        
+        .topnav a.active {
+          background-color: #04AA6D;
+          color: white;
+        }
+        .topnav img.split {
+        float: right;
+        background-color: transparent;
+        color: black;
+        margin:10px;
+        margin-right:15px;
+        }
+
+        h2 {
+            font-size: 15px;
+        }
+
+        #logo {
+            font-size: 30px;
+        }
+
+        p {
+            margin-bottom:0px;
+            margin-top:0px;
+        }
+
+        .avatar {
+        vertical-align: middle;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        }
+
+        .topClasses {
+            margin-top:30px;
+            margin-bottom: 400px;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            margin: 0 auto;
+            border-radius: 20px;
+        }
+     
+        .box img {
+            width: 100%;
+            transition: 0.3s all ease-in-out;
+            border-radius: 20px;
+        }
+     
+        .box:hover img {
+            transform: scale(1.2);
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        * {
+        box-sizing: border-box;
+        }
+
+        .row > .column {
+        padding: 0 8px;
+        }
+
+        
+
+        .column {
+        float: left;
+        width: 25%;
+        }
+
+        .title {
+        position: absolute;
+        bottom: 50px;
+        left: 26px;
+        font-size:30px;
+        }
+
+        .monkey {
+        position: relative;
+        text-align: center;
+        color: white;
+        }
+
+        .trending h4{
+            margin-top: 50px;
+            font-size: 40px;
+            margin-left: 20px;
+        }
+
+        </style>
+</head>
+
+
+<body>
+    
+    <div class="topnav">
+        <a href="register.html" id="logo"><img src="uwLogo2.png" width="30px"> MyPlan</a>
+        <img src="profile.png" class = "split avatar">
+      </div>
+      
+      <div style="padding-left:16px">
+        <h2><span style="font-weight:bold;">Student ID: </span>0xf292c38c7c279aaa5c47ed67a8da3f18d2ff05b3</h2>
+        <p>Seattle Campus</p>
+        <p>Computer Science</p>
+      </div>
+
+      <div class="topClasses">
+        <h3 style="text-align:center; font-family:Arial, Helvetica, sans-serif; font-size:xx-large;">Recommended Classes</h3>
+                <div class="row">
+                    <div class="column box monkey">
+                      <img src="cse.png">
+                      <div class="title">CSE 121</div>
+                    </div>
+                    <div class="column box monkey">
+                      <img src="math1.jpg">
+                      <div class="title">MATH 420</div>
+                    </div>
+                    <div class="column box monkey">
+                      <img src="stat.jpg">
+                      <div class="title">STAT 220</div>
+                    </div>
+                    <div class="column box monkey">
+                      <img src="chem1.jpg">
+                      <div class="title">CHEM 142</div>
+                    </div>
+                </div>
+            
+      </div>
+
+      
+      <div class="trending">
+        <h4>Trending</h4>
+        <p>aaskdfhasdfj</p>
+      </div>
+
+</body>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="index.js" type="module"></script>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSE 121</title>
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        
+        <style>
+            body {
+                margin: 0;
+                font-family: Poppins;
+            }
+            .topnav {
+            overflow: hidden;
+            
+            transition-duration: 0.4s;
+            }
+            
+            .topnav a {
+            float: left;
+            color: #000000;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            transition-duration: 0.4s;
+            }
+            
+            .topnav a:hover {
+            
+            color: rgb(221, 209, 68);
+            transition-duration: 0.4s;
+            }
+            
+            .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+            }
+            .topnav img.split {
+            float: right;
+            background-color: transparent;
+            color: black;
+            margin:10px;
+            margin-right:15px;
+            }
+
+            .avatar {
+            vertical-align: middle;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            }
+
+            #logo {
+                font-size: 30px;
+            }
+
+            div p{
+                margin-top:10px;
+                text-align:center;
+                margin-bottom:0px;
+                
+            }
+
+            div p1{
+                width:400px;
+                
+            }
+            
+            .trans {
+                animation: fadeInAnimation ease 3s;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+            }
+
+            .wrapper {
+                
+                width:70%;
+                margin-left:15%;
+                margin-right:15%;
+            }
+
+            @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            
+            100% {
+                opacity:1;
+            }
+            }
+
+            .column {
+            float: left;
+            width: 25%;
+            }
+
+            .center{
+                text-align:center;
+            }
+
+            button {
+                border: none;
+                color: black;
+                height:45px;
+                width: 30%;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                font-family:'Courier New', Courier, monospace;
+                margin: 4px 2px;
+                transition-duration: 0.4s;
+                cursor: pointer;
+                margin-bottom:10px;
+            }
+
+            button:hover{
+                background-color:rgb(81, 77, 77);
+                color:white;
+            }
+        </style>
+    </head> 
+    <body>
+        <div class="topnav">
+            <a href="register.html" id="logo"><img src="uwLogo2.png" width="30px"> MyPlan</a>
+            
+            <div class="profile">
+                <img src="profile.png" class = "profile split avatar" onclick="info()">
+            </div>
+        </div>
+        <div class="center">
+        <div>
+            <p class="trans" style="font-size:100px">CSE 121</p>
+            <p style="font-size: 30px;"><b>Introduction To Computer Programming</b></p>
+            <div class="wrapper"><p>Introduction to computer programming for students without previous programming experience. Students write programs to express algorithmic thinking and solve computational problems motivated by modern societal and scientific needs. Includes procedural programming constructs (methods), control structures (loops, conditionals), and standard data types, including arrays. Cannot be taken for credit if credit received for CSE 142.</p>
+                </div>
+        </div>
+            <br>
+            <!-- <button class="enableEthereumButton btn" id="god" onclick="lol()">Connect Wallet</button> -->
+            <br>
+            <button class="sendEthButton btn">Register</button>
+        </div>
+
+
+
+        
+        
+    </body>  
+
+    <script>
+        getAccount();
+        const ethereumButton = document.querySelector('.enableEthereumButton');
+        const sendEthButton = document.querySelector('.sendEthButton');
+
+let accounts = [];
+
+//Sending Ethereum to an address
+sendEthButton.addEventListener('click', () => {
+  ethereum
+    .request({
+      method: 'eth_sendTransaction',
+      params: [
+        {
+          from: accounts[0],
+          to: '0xF2D8ffE5D1EfeCD4B52b57b7B6c0f632d6CBd5F6',
+          value: '0x00',
+          data: "0xa43b2cbe0000000000000000000000000000000000000000000000000000000000003250",
+          //gasPrice: '0x09184e72a000',
+          //gas: '0x2710',
+        },
+      ],
+    })
+    .then((txHash) => console.log(txHash))
+    .catch((error) => console.error);
+});
+
+// ethereumButton.addEventListener('click', () => {
+//   getAccount();
+// });
+
+    function lol() {
+        document.getElementById("god").display="none";
+    }
+
+async function getAccount() {
+  accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+}
+        
+    </script>
+    <script src="index.js" type="module"></script>
+</html>

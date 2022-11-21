@@ -45,6 +45,8 @@ async function connectWallet() {
     return await ethereum.request({ method: 'eth_accounts' });
 }
 
+
+
 const onClickInstallMetaMask = () => {
     onboarding.startOnboarding();
     loader.style.display = 'block';
@@ -75,7 +77,7 @@ const MetaMaskClientCheck = () => {
             if (accounts && accounts[0] > 0) {
                 connected(accounts)
             } else {
-                statusText.innerHTML = 'Winter 2022 Class Register'
+                statusText.innerHTML = 'Winter 2023 Class Register'
                 statusDesc.innerHTML = `To begin, please connect your UW MetaMask wallet.`
                 btn.innerText = 'Connect MetaMask'
                 upArrow.style.display = 'block';
